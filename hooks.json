@@ -18,6 +18,10 @@
       },
       {
         "source": "string",
+        "name": "container-echo"
+      },
+      {
+        "source": "string",
         "name": "--string-arg"
       },
       {
