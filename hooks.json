@@ -1,7 +1,7 @@
 [
   {
     "id": "webhook",
-    "execute-command": "/bin/dagger run container-echo",
+    "execute-command": "/bin/dagger",
     "response-message": "dagger run container-echo executed",
     "response-headers":
     [
@@ -13,8 +13,16 @@
     "pass-arguments-to-command":
     [
       {
-        "source": "payload",
-        "name": "value"
+        "source": "string",
+        "name": "run"
+      },
+      {
+        "source": "string",
+        "name": "--string-arg"
+      },
+      {
+        "source": "string",
+        "name": "hello from dagger!!!"
       }
     ],
     "trigger-rule":
