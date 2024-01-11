@@ -1,7 +1,7 @@
 [
   {
     "id": "webhook",
-    "execute-command": "/bin/dagger",
+    "execute-command": "dagger",
     "response-message": "dagger run container-echo executed",
     "command-working-directory": "/hooks-test",
     "response-headers":
