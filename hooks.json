@@ -1,9 +1,8 @@
 [
   {
     "id": "webhook",
-    "execute-command": "/home/adnan/redeploy-go-webhook.sh",
-    "command-working-directory": "/home/adnan/go",
-    "response-message": "I got the payload!",
+    "execute-command": "dagger run container-echo",
+    "response-message": "dagger run container-echo executed",
     "response-headers":
     [
       {
@@ -15,33 +14,13 @@
     [
       {
         "source": "payload",
-        "name": "head_commit.id"
-      },
-      {
-        "source": "payload",
-        "name": "pusher.name"
-      },
-      {
-        "source": "payload",
-        "name": "pusher.email"
+        "name": "value"
       }
     ],
     "trigger-rule":
     {
       "and":
       [
-        {
-          "match":
-          {
-            "type": "payload-hmac-sha1",
-            "secret": "mysecret",
-            "parameter":
-            {
-              "source": "header",
-              "name": "X-Hub-Signature"
-            }
-          }
-        },
         {
           "match":
           {
