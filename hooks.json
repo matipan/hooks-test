@@ -15,7 +15,7 @@
     [
       {
         "source": "string",
-        "name": "run"
+        "name": "call"
       },
       {
         "source": "string",
