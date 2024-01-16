@@ -1,33 +1,14 @@
 [
   {
     "id": "webhook",
-    "execute-command": "/bin/dagger",
-    "response-message": "dagger run container-echo executed",
+    "execute-command": "ls",
+    "response-message": "executed ls",
     "command-working-directory": "/hooks-test",
     "response-headers":
     [
       {
         "name": "Access-Control-Allow-Origin",
         "value": "*"
-      }
-    ],
-    "pass-arguments-to-command":
-    [
-      {
-        "source": "string",
-        "name": "call"
-      },
-      {
-        "source": "string",
-        "name": "container-echo"
-      },
-      {
-        "source": "string",
-        "name": "--string-arg"
-      },
-      {
-        "source": "string",
-        "name": "hello from dagger!!!"
       }
     ],
     "trigger-rule":
@@ -38,7 +19,7 @@
           "match":
           {
             "type": "value",
-            "value": "refs/heads/master",
+            "value": "refs/heads/main",
             "parameter":
             {
               "source": "payload",
