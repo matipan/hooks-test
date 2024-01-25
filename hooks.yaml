@@ -9,8 +9,8 @@
     name: container-echo
   - source: string
     name: "--string-arg"
-  - source: payload
-    name: ref
+  - source: string
+    name: "holis"
     #name: commits.0.message
   trigger-rule:
     and:
