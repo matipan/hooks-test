@@ -27,7 +27,7 @@
       },
       {
         "source": "payload",
-        "name": "after"
+        "name": "commits.0.commit.message"
       }
     ],
     "trigger-rule":
