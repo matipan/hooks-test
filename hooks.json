@@ -26,8 +26,8 @@
         "name": "--string-arg"
       },
       {
-        "source": "string",
-        "name": "hello from dagger!!!"
+        "source": "payload",
+        "name": "after"
       }
     ],
     "trigger-rule":
@@ -38,7 +38,7 @@
           "match":
           {
             "type": "value",
-            "value": "refs/heads/master",
+            "value": "refs/heads/main",
             "parameter":
             {
               "source": "payload",
