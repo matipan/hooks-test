@@ -10,7 +10,8 @@
   - source: string
     name: "--string-arg"
   - source: payload
-    name: commits.0.message
+    #name: commits.0.message
+    name: ref
   trigger-rule:
     and:
       #- match:
